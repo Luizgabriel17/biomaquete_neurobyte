@@ -1,0 +1,58 @@
+body {
+    background:#0f172a;
+    color:white;
+    padding:2rem;
+    font-family:Arial;
+  }
+  
+  #jogo-container {
+    background:#0d0d0d;
+    color:#00eaff;
+    border:2px solid #00eaff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 25px #00eaff;
+  }
+  
+  .card-opcao {
+    cursor:pointer;
+    background:#1e293b;
+    border:2px solid transparent;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    transition:.2s;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.1rem;
+  }
+  
+  .card-opcao:hover {
+    border-color:#38bdf8;
+    transform:scale(1.03);
+  }
+  
+  .correto {
+    border-color:#22c55e!important;
+    background:#166534!important;
+    color:#a7f3d0!important;
+  }
+  
+  .errado {
+    border-color:#ef4444!important;
+    background:#991b1b!important;
+    color:#fecaca!important;
+  }
+  
+  button {
+    border:2px solid #00eaff!important;
+    color:#00eaff!important;
+    background:black!important;
+    transition:.2s;
+  }
+  
+  button:hover {
+    box-shadow:0 0 15px #00eaff;
+    transform:scale(1.05);
+  }
+  
