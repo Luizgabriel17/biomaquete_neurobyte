@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top left, #0b0f1f, #10152f);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ====== CABEÇALHO ====== */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #00eaff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #00eaff, 0 0 25px #007bff;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #00eaff, 0 0 20px #007bff; }
+  to { text-shadow: 0 0 25px #00ffff, 0 0 45px #007bff; }
+}
+
+.titulo-destaque {
+  color: #ffffff;
+}
+
+header p {
+  color: #b8c2ff;
+  font-size: 1.15em;
+  margin-top: 10px;
+}
+
+/* ====== CARDS ====== */
+.container {
+  max-width: 1100px;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 238, 255, 0.2);
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  padding: 25px 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.15);
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, transparent 70%);
+  transform: rotate(25deg);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #00eaff;
+  margin-bottom: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+.card h3 {
+  margin: 10px 0 5px;
+  color: #00eaff;
+  font-weight: 600;
+}
+
+.card p {
+  color: #bcd0ff;
+  font-size: 0.95em;
+}
+
+/* ====== RODAPÉ ====== */
+footer {
+  background: #0a0a15;
+  color: #777;
+  padding: 20px 10px;
+  font-size: 0.9em;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid rgba(0,255,255,0.2);
+}
+
+footer a {
+  color: #00eaff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #00ffff;
+}
+
+footer span {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { color: #00eaff; }
+  50% { color: #00ffff; }
+  100% { color: #00eaff; }
+}
